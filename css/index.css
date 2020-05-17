@@ -1,0 +1,720 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    background: radial-gradient(circle, rgba(0, 68, 145, 1) 0%, rgba(0, 29, 62, 1) 100%);
+    opacity: 1;
+}
+
+/* 头部开始 */
+header {
+    width: 100%;
+    position: relative;
+    height: .95rem;
+    padding: 0 2.825rem;
+    display: flex;
+    text-align: center;
+    font-size: .325rem;
+}
+
+.time {
+    width: 5.35rem;
+    margin-top: .1125rem;
+    height: .5125rem;
+    line-height: .5125rem;
+    transform: skewX(45deg);
+    background-color: #000;
+    color: #11AEFF;
+    border-radius: .1rem;
+}
+
+.time-text {
+    transform: skewX(-45deg);
+}
+
+.weather {
+    width: 5.35rem;
+    margin-top: .1125rem;
+    height: .5125rem;
+    line-height: .5125rem;
+    transform: skewX(-45deg);
+    background-color: #000;
+    color: #11AEFF;
+    border-radius: .1rem;
+}
+
+.weather-text {
+    transform: skewX(45deg);
+}
+
+.title {
+    position: relative;
+    width: 9rem;
+    height: .95rem;
+    margin: 0 .1875rem;
+    transform-origin: bottom;
+    color: #fff;
+    padding-top: .1125rem;
+
+}
+
+.title-border {
+    position: absolute;
+    top: 0;
+    width: 8rem;
+    left: .0375rem;
+    height: .95rem;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    transform: perspective(0.45em) rotateX(-2deg);
+}
+
+.title-text-ch {
+    font-size: .375rem;
+}
+
+.title-text-en {
+    font-size: .15rem;
+}
+
+/* 头部结束 */
+/* 内容开始 */
+main {
+    width: 100%;
+    display: flex;
+    color: #fff;
+    padding: 0 .325rem 0 .325rem;
+    height: 12.6rem;
+}
+
+.left {
+    flex: 1;
+    position: relative;
+    /* background-color: red; */
+}
+
+.middle {
+    flex: 3;
+    /* background-color: green; */
+}
+
+.right {
+    flex: 1;
+    /* background-color: pink; */
+    padding-left: .2rem;
+}
+
+/* 左边开始 */
+.date-select {
+    overflow: hidden;
+    position: absolute;
+    top: -0.375rem;
+}
+
+.date-select>li {
+    margin-right: .075rem;
+    padding: .0625rem;
+    float: left;
+    border-radius: .0625rem;
+    background-color: #004A9E;
+}
+
+.information-title {
+    font-size: .3rem;
+}
+
+.information-title span {
+    font-size: .175rem;
+    font-weight: normal;
+    color: #00B1FF;
+}
+
+.information-content {
+    width: 4.075rem;
+    height: 5.775rem;
+    margin-top: .1rem;
+
+}
+
+.information-item {
+    position: relative;
+    width: 100%;
+    padding: 0 .1rem 0 .2125rem;
+    border-radius: .125rem;
+}
+
+.work-item {
+    height: 1.775rem;
+
+    background: rgba(0, 119, 255, .2);
+}
+
+.item-title {
+    padding-top: .0625rem;
+    text-align: right;
+    font-size: .2rem;
+}
+
+.item-statics {
+    margin-top: .125rem;
+    font-size: .15rem;
+    overflow: hidden;
+}
+
+.big-num {
+    line-height: .6rem;
+    font-family: Impact;
+    font-size: .5rem;
+    font-weight: 400;
+}
+
+.total {
+    width: 50%;
+    float: left;
+}
+
+.performance {
+    width: 50%;
+    float: left;
+}
+
+.item-sh {
+    margin-top: .0875rem;
+
+}
+
+.sh-num {
+    font-size: .225rem;
+    font-family: Impact;
+    font-weight: 400;
+    line-height: .275rem;
+    padding-left: .1625rem;
+}
+
+.decorate {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.construction-item {
+    margin-top: .325rem;
+    height: 1.775rem;
+
+    background: rgba(0, 119, 255, .2);
+}
+
+.driver-item {
+    margin-top: .325rem;
+    height: 1.575rem;
+
+    background-color: rgba(154, 255, 0, .2);
+    ;
+}
+
+/* 工地配送 */
+.delivery {
+    padding-top: .625rem;
+}
+
+.delivery-content {
+    width: 4.075rem;
+    height: 4.5375rem;
+    margin-top: .125rem;
+    padding: .1875rem .125rem 0;
+
+    border-radius: .125rem;
+    background: rgba(0, 119, 255, .2);
+}
+
+.delivery-address {
+    position: relative;
+    width: 100%;
+
+    text-align: center;
+    font-size: .175rem;
+}
+
+.current-address {
+    width: 3.3125rem;
+    height: .4rem;
+    margin: 0 auto;
+    line-height: .4rem;
+    border-radius: .4rem;
+    background-color: #000;
+}
+
+.left-arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: .1125rem;
+    height: 18px;
+}
+
+.left-arrow img {
+    width: 100%;
+}
+
+.right-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: .1125rem;
+    height: 18px;
+}
+
+.right-arrow img {
+    width: 100%;
+}
+
+.delivery-item {
+    overflow: hidden;
+    width: 3.3125rem;
+    margin: 18px auto 0;
+    font-size: .15rem;
+    color: #ABABAB;
+    /* background-color: red; */
+}
+
+.delivery-item span {
+    float: right;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    /* text-align: right; */
+}
+
+.delivey-pie {
+    width: 100%;
+    height: 2.6rem;
+    /* background-color: tomato; */
+}
+
+/* 左边结束 */
+/* 中间开始 */
+.map {
+    width: 14.375rem;
+    height: 8rem;
+
+    border: .0125rem dashed #fff;
+    background-color: #000;
+}
+
+.car-info {
+    position: relative;
+    width: 14.375rem;
+    height: 4.2rem;
+    padding-top: .15rem;
+}
+
+.car-info-title {
+    width: 13.9875rem;
+    height: .4875rem;
+    margin: 0 auto;
+    background: rgba(0, 14, 30, 1);
+    border-radius: .125rem;
+    font-size: .175rem;
+    font-weight: bold;
+    padding: .125rem .3375rem;
+}
+
+.car-info-title>li {
+    float: left;
+}
+
+.info-1 {
+    width: 1.725rem;
+}
+
+.info-2 {
+    width: 1.5375rem;
+}
+
+.info-3 {
+    width: 1.375rem;
+}
+
+.info-4 {
+    width: 1.3625rem;
+}
+
+.info-5 {
+    width: 1.2625rem;
+}
+
+.info-6 {
+    width: 1.3125rem;
+}
+
+.info-7 {
+    width: 1.075rem;
+}
+
+.info-8 {
+    width: 1.075rem;
+}
+
+.info-9 {
+    width: 1.075rem;
+}
+
+.car-info-content {
+    width: 13.9875rem;
+    height: 2.55rem;
+    margin: .2rem auto 0;
+    padding: 0 .3375rem;
+    overflow: hidden;
+}
+
+.car-info-detail {
+    width: 100%;
+    height: .25rem;
+    line-height: .25rem;
+    margin-bottom: .32rem;
+}
+
+.car-info-detail p {
+    float: left;
+}
+
+
+.quadrangle {
+    width: 13.9875rem;
+    height: .2875rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image: url(../image/quadrangle.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.support {
+    width: 1.4625rem;
+    height: .175rem;
+    line-height: .175rem;
+    margin: 0 auto;
+
+    text-align: center;
+    border-radius: .1rem;
+    background-color: #217AD2;
+    color: #53CAFF;
+}
+
+/* 中间结束 */
+/* 右边开始 */
+.warning {
+    margin-top: .1rem;
+    width: 4.1625rem;
+    height: 4.0625rem;
+}
+
+.production-warning {
+    width: 100%;
+    height: 2.275rem;
+
+    border-radius: .125rem;
+    background-color: #004491;
+}
+
+.warning-title {
+    padding: .0875rem .2375rem 0 .1125rem;
+    font-size: .2rem;
+    font-weight: bold;
+}
+
+.worn-box {
+    width: 3.7125rem;
+    height: 1.375rem;
+    margin: 22px auto 0;
+}
+
+.production-warning-type {
+    width: 10rem;
+}
+
+.production-item {
+    width: 1.15rem;
+    height: 1.375rem;
+    float: left;
+    margin-right: .125rem;
+    border-radius: .125rem;
+}
+
+.warn-name {
+    font-size: .175rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .1875rem 0 .125rem;
+}
+
+.warn-count {
+    font-family: Impact;
+    font-size: .325rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.machine-warn {
+    border: 3px solid rgba(255, 6, 6, 1);
+}
+.machine-warn-active{
+    animation-name: breathe1;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes breathe1 {
+    0% {
+        border: 3px solid rgba(255,6,6,.1);
+        box-shadow: 0 0 1px rgba(0, 147, 223, 0.4), 0 0 1px rgba(0, 147, 223, 0.1) inset;
+    }
+    100% {
+        border: 3px solid rgba(255,6,6,1);
+        box-shadow: 0 0 10px #FF0606, 0 0 10px #FF0606 inset;
+    }
+}
+.warehouse-warn {
+    border: 3px solid rgba(255, 131, 6, 1);
+}
+.warehouse-warn-active{
+    animation-name: breathe2;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes breathe2 {
+    0% {
+        border: 3px solid rgba(255,131,6,.1);
+        box-shadow: 0 0 1px rgba(0, 147, 223, 0.4), 0 0 1px rgba(0, 147, 223, 0.1) inset;
+    }
+    100% {
+        border: 3px solid rgba(255,131,6,1);
+        box-shadow: 0 0 10px #FF8306, 0 0 10px #FF8306 inset;
+    }
+}
+
+.dust-warn {
+    border: 3px solid rgba(255, 238, 6, 1);
+}
+
+.dust-warn-active{
+    animation-name: breathe3;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes breathe3 {
+    0% {
+        border: 3px solid rgba(255, 238, 6, .1);
+        box-shadow: 0 0 1px rgba(0, 147, 223, 0.4), 0 0 1px rgba(0, 147, 223, 0.1) inset;
+    }
+    100% {
+        border: 3px solid rgba(255, 238, 6, 1);
+        box-shadow: 0 0 10px #FFEE06, 0 0 10px #FFEE06 inset;
+    }
+}
+
+.car-warning {
+    width: 100%;
+    height: 1.5375rem;
+    margin-top: .25rem;
+
+    border-radius: .125rem;
+    background-color: #004491;
+}
+
+.car-warning-type {
+    padding: .325rem .42rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.car-item {
+    width: .6rem;
+}
+
+.item-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 灯光警告样式开始 */
+
+.warn-logo {
+    width: 24px;
+    height: 36px;
+    padding-top: 12px;
+    position: relative;
+    animation-name: change;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.main {
+    width: 11px;
+    height: 12px;
+    border-radius: 5.5px 5.5px 0 0;
+    margin: 0 auto;
+    background-color: #FF0606;
+}
+
+.bottom {
+    width: 16px;
+    height: 3px;
+    border-radius: 1.5px;
+    margin: 2px auto;
+    background-color: #FF0606;
+}
+.lines{
+    width: 24px;
+    height: 12px;
+    position: absolute;
+    top:4px;
+    left: 0;
+}
+.line{
+    width: 1px;
+    height: 4.5px;
+    border-radius: 0.5px;
+    background: #FF0606;
+}
+.line1{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 1px;
+    margin: auto;
+}
+.line2{
+    transform: rotate(45deg);
+    position: absolute;
+    top: 3.5px;
+    right: 6px;
+}
+.line3{
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 3.5px;
+    left: 6px;
+}
+.line4{
+    transform: rotate(82deg);
+    position: absolute;
+    top: 9px;
+    right: 3px;
+}
+.line5{
+    transform: rotate(-82deg);
+    position: absolute;
+    top: 9px;
+    left: 3px;
+}
+@keyframes change {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+/* 灯光警告样式结束 */
+
+.warn-number {
+    width: .2rem;
+    height: .45rem;
+    line-height: .45rem;
+    font-family: Impact;
+    font-size: .375rem;
+}
+
+.warn-grade {
+    width: 110%;
+    color: #00B1FF;
+    text-align: left;
+    font-size: .1rem;
+    white-space: nowrap;
+    transform: scale(0.7);
+    margin-left: -.125rem;
+}
+
+
+/* 配送 */
+.distribution-title {
+    margin-top: .625rem;
+}
+
+.distribution-content {
+    margin-top: .1rem;
+    width: 4.1625rem;
+    padding-top: .225rem;
+}
+
+.distribution-pie {
+    width: 100%;
+    height: 3.65rem;
+    margin: 0 auto;
+}
+
+.distribution-grade {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 3.7125rem;
+    height: 1.8375rem;
+    margin: .35rem auto 0;
+}
+
+.grade-item {
+    display: flex;
+    justify-content: space-around;
+    width: 1.775rem;
+    height: .7375rem;
+    line-height: .7375rem;
+    transform: skewX(-10deg);
+    border-radius: .125rem;
+    font-size: .15rem;
+    
+}
+.grade-item p{
+    transform: skewX(10deg);
+}
+.grade-item span{
+    font-family: Impact;
+    font-size: .325rem;
+    transform: skewX(10deg);
+}
+.grade-a{
+    background-color: #1F4A32;
+}
+.grade-b{
+    background-color: #0091A2;
+}
+.grade-c{
+    background-color: #A85F0B;
+}
+.grade-d{
+    background-color: #004065;
+}
+/* 右边结束 */
+
+/* 内容结束 */

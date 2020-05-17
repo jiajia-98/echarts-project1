@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 24px;
+            height: 36px;
+            padding-top: 12px;
+            box-sizing: border-box;
+            position: relative;
+            animation-name: change;
+            animation-timing-function: ease-in-out;
+            animation-duration: 500ms;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .main {
+            width: 11px;
+            height: 12px;
+            border-radius: 5.5px 5.5px 0 0;
+            margin: 0 auto;
+            background-color: #FF0606;
+        }
+
+        .bottom {
+            width: 16px;
+            height: 3px;
+            
+            border-radius: 1.5px;
+            margin: 2px auto;
+            background-color: #FF0606;
+        }
+        .lines{
+            width: 24px;
+            height: 12px;
+            position: absolute;
+            top:4px;
+            left: 0;
+        }
+        .line{
+            width: 1px;
+            height: 4.5px;
+            border-radius: 0.5px;
+            background: #FF0606;
+        }
+        .line1{
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 1px;
+            margin: auto;
+        }
+        .line2{
+            transform: rotate(45deg);
+            position: absolute;
+            top: 3.5px;
+            right: 6px;
+        }
+        .line3{
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 3.5px;
+            left: 6px;
+        }
+        .line4{
+            transform: rotate(82deg);
+            position: absolute;
+            top: 9px;
+            right: 3px;
+        }
+        .line5{
+            transform: rotate(-82deg);
+            position: absolute;
+            top: 9px;
+            left: 3px;
+        }
+        @keyframes change {
+            0%{
+                opacity: 0.1;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="main"></div>
+        <div class="bottom"></div>
+        <div class="lines">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="line line4"></div>
+            <div class="line line5"></div>
+        </div>
+    </div>
+</body>
+
+</html>
